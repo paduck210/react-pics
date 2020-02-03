@@ -9,7 +9,7 @@ class SearchWord extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state.input);
+    this.props.onSubmit(this.state.input);
   };
 
   render() {
