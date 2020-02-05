@@ -10,18 +10,20 @@ class SearchWord extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <form className="ui form" onSubmit={this.handleSubmit}>
-          <div className="field">
-            <label>User Input</label>
-            <input
-              type="text"
-              onChange={e => this.setState({ input: e.target.value })}
-              value={this.state.term}
-            />
-          </div>
-        </form>
-      </div>
+      <form
+        className="ui form"
+        style={{ marginBottom: '4%' }}
+        onSubmit={this.handleSubmit}
+      >
+        <div className="field">
+          <label>User Input</label>
+          <input
+            type="text"
+            onChange={e => this.setState({ input: e.target.value })}
+            value={this.state.term}
+          />
+        </div>
+      </form>
     );
   }
 }
