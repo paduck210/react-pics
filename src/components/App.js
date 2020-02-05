@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchWord from './SearchWord';
+import ImageList from './ImageList';
 import unsplash from '../api/unsplash';
 
 class App extends React.Component {
@@ -16,7 +17,7 @@ class App extends React.Component {
     return (
       <div className="container" style={{ margin: '50px' }}>
         <SearchWord onSubmit={this.onSearchSubmit} />
-        <h1>{this.state.images.length}</h1>
+        <ImageList images={this.state.images} />
       </div>
     );
   }
